@@ -6,6 +6,7 @@ import { Studentcontext } from '../App';
 function Addstudent() {
     let context = useContext(Studentcontext);
 
+    //All states defined for AddStudent page
     const [firstName, setFirstname] = useState("");
     const [lastName, setLastname] = useState("");
     const [mobile, setMobile] = useState("");
@@ -15,7 +16,7 @@ function Addstudent() {
     const [department, setDepartment] = useState("");
 
     let handleSave = () => {
-        
+        //On save student it will append the allstudent list
         context.students.push({
             firstName,
             lastName,

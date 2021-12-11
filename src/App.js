@@ -12,6 +12,8 @@ function App() {
   //This is the data we will be sending to dashboard component via routes
   
   let data = {earning:"30,000",annual:"3,60,000",task:20,pending:26};
+
+  //Temporary JSON data which will be passed to other component
   const [students,setStudents] = useState([
     {
        "firstName" : "Chaitanya",
@@ -50,7 +52,7 @@ function App() {
             {/*Using routes tag we are implementing redirects*/}
             <Routes>
             {/*When base url appended with /dashboard then Dashboard component will be active. We are passing data through props*/}
-            <Route path='/dashboard' element={<Dashboard value={data}/>}></Route>
+            <Route path='/' element={<Dashboard value={data}/>}></Route>
             {/*When base url appended with /allstudents then Allstudent component will be active*/}
             <Route path='/allstudents' element={<Allstudents/>}></Route>
             {/*When base url appended with /addstudent then Addstudent component will be active*/}
